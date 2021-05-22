@@ -10,7 +10,7 @@ resource "aws_vpc" "default" {
     enable_dns_hostnames = true
     tags = {
         Name = "${var.vpc_name}"
-	Owner = "Sree"
+	Owner = "Surya"
     }
 }
 
@@ -34,7 +34,7 @@ resource "aws_subnet" "subnet1-public" {
 resource "aws_subnet" "subnet2-public" {
     vpc_id = "${aws_vpc.default.id}"
     cidr_block = "${var.public_subnet2_cidr}"
-    availability_zone = "us-east-1b"
+    availability_zone = "us-east-1a"
 
     tags = {
         Name = "${var.public_subnet2_name}"
